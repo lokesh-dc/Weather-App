@@ -1,6 +1,6 @@
 # Weather APP - <a href="https://hilarious-alpaca-f7c2a1.netlify.app/"> Deployed Link </a>
 ## SUMMARY : 
-  An App to get weather for your hometown or search for place you may plan to travel. 
+  An App to get weather for your hometown or search for any place you may plan to travel. 
 ## Tech Stack
   * HTML5   
   * CSS3 
