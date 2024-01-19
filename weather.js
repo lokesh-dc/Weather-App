@@ -5,8 +5,6 @@ function getWeather(ele) {
 	if (ele == undefined) city = document.getElementById("query").value;
 	else city = ele;
 
-	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7ba2b1de0ab33d7af34525a99b67d3e5`;
-
 	fetch(url)
 		.then(function (res) {
 			return res.json();
