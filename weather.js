@@ -179,6 +179,10 @@ document.getElementById("search").addEventListener("click", function () {
 document
 	.getElementById("searchInput")
 	.addEventListener("change", function (event) {
+		if (event.keyCode === 13) {
+			getWeather(event.target.value);
+		}
+
 		getWeather(event.target.value);
 	});
 
