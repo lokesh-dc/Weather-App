@@ -5,8 +5,6 @@ function getWeather(ele) {
 	if (ele == undefined) city = document.getElementById("query").value;
 	else city = ele;
 
-	console.log({ city, ele });
-
 	let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7ba2b1de0ab33d7af34525a99b67d3e5`;
 
 	fetch(url)
@@ -123,8 +121,8 @@ function sevenDaysForcast(data) {
 		let img = document.createElement("img");
 
 		if (max_temp >= 30) img.src = "images/sunny.png";
-		else if (max_temp >= 25 && max_temp < 30) img.src = "images/cloudy.png";
-		else if (max_temp >= 20 && max_temp < 25) img.src = "images/rainy.png";
+		else if (max_temp >= 20 && max_temp < 30) img.src = "images/cloudy.png";
+		else if (max_temp >= 15 && max_temp < 20) img.src = "images/rainy.png";
 		else img.src = "images/snow.png";
 		div.append(day, img, max, min);
 
@@ -177,6 +175,12 @@ document.getElementById("search").addEventListener("click", function () {
 	const queryValue = document.getElementById("query").value;
 	getWeather(queryValue);
 });
+
+document
+	.getElementById("searchInput")
+	.addEventListener("change", function (event) {
+		getWeather(event.target.value);
+	});
 
 //function to get users location
 function getLocation() {
